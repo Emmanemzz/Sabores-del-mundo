@@ -30,6 +30,9 @@
     --color-neutral-700: oklch(0.371 0 0);
     --color-neutral-800: oklch(0.269 0 0);
     --color-stone-50: oklch(0.985 0.001 106.423);
+    --color-stone-200: oklch(0.923 0.003 48.717);
+    --color-stone-300: oklch(0.869 0.005 56.366);
+    --color-stone-400: oklch(0.709 0.01 56.259);
     --color-stone-500: oklch(0.553 0.013 58.071);
     --color-stone-800: oklch(0.268 0.007 34.298);
     --color-stone-900: oklch(0.216 0.006 56.043);
@@ -378,6 +381,9 @@
       max-width: 96rem !important;
     }
   }
+  .m-5 {
+    margin: calc(var(--spacing) * 5);
+  }
   .m-auto {
     margin: auto;
   }
@@ -398,6 +404,9 @@
   }
   .mx-auto {
     margin-inline: auto;
+  }
+  .my-auto {
+    margin-block: auto;
   }
   .mt-0 {
     margin-top: calc(var(--spacing) * 0);
@@ -674,6 +683,9 @@
   .h-100 {
     height: calc(var(--spacing) * 100);
   }
+  .h-110 {
+    height: calc(var(--spacing) * 110);
+  }
   .h-120 {
     height: calc(var(--spacing) * 120);
   }
@@ -682,6 +694,9 @@
   }
   .h-150 {
     height: calc(var(--spacing) * 150);
+  }
+  .h-800 {
+    height: calc(var(--spacing) * 800);
   }
   .h-auto {
     height: auto;
@@ -754,6 +769,9 @@
   }
   .w-auto {
     width: auto;
+  }
+  .w-fit {
+    width: fit-content;
   }
   .w-full {
     width: 100%;
@@ -1863,6 +1881,9 @@
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
+  .py-3 {
+    padding-block: calc(var(--spacing) * 3);
+  }
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
   }
@@ -2674,6 +2695,34 @@
       }
     }
   }
+  .hover\:bg-stone-200 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-stone-200);
+      }
+    }
+  }
+  .hover\:bg-stone-300 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-stone-300);
+      }
+    }
+  }
+  .hover\:bg-stone-400 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-stone-400);
+      }
+    }
+  }
+  .hover\:bg-teal-400 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-teal-400);
+      }
+    }
+  }
   .hover\:bg-teal-500 {
     &:hover {
       @media (hover: hover) {
@@ -2685,6 +2734,13 @@
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-teal-600);
+      }
+    }
+  }
+  .hover\:bg-teal-700 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-teal-700);
       }
     }
   }
@@ -2716,6 +2772,13 @@
       }
     }
   }
+  .hover\:text-teal-500 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-teal-500);
+      }
+    }
+  }
   .hover\:text-teal-600 {
     &:hover {
       @media (hover: hover) {
@@ -2729,6 +2792,11 @@
         --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
         box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
       }
+    }
+  }
+  .focus\:underline {
+    &:focus {
+      text-decoration-line: underline;
     }
   }
   .focus\:ring {
@@ -2771,6 +2839,16 @@
   .md\:visible {
     @media (width >= 48rem) {
       visibility: visible;
+    }
+  }
+  .md\:m-0 {
+    @media (width >= 48rem) {
+      margin: calc(var(--spacing) * 0);
+    }
+  }
+  .md\:m-1 {
+    @media (width >= 48rem) {
+      margin: calc(var(--spacing) * 1);
     }
   }
   .md\:my-8 {
