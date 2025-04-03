@@ -394,6 +394,9 @@
   .m-5 {
     margin: calc(var(--spacing) * 5);
   }
+  .m-15 {
+    margin: calc(var(--spacing) * 15);
+  }
   .m-auto {
     margin: auto;
   }
@@ -776,6 +779,9 @@
   }
   .w-150 {
     width: calc(var(--spacing) * 150);
+  }
+  .w-200 {
+    width: calc(var(--spacing) * 200);
   }
   .w-auto {
     width: auto;
@@ -2756,6 +2762,20 @@
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-emerald-400);
+      }
+    }
+  }
+  .hover\:bg-emerald-500 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-emerald-500);
+      }
+    }
+  }
+  .hover\:bg-emerald-700 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-emerald-700);
       }
     }
   }
