@@ -1,4 +1,7 @@
-
 article{
     min-height: 575px;
+}
+
+.category{
+    min-height: auto;
 }
