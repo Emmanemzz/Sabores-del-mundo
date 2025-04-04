@@ -9,3 +9,7 @@ article{
 .detalle-receta{
     min-height: auto;
 }
+
+.elaboracion{
+    max-height: fit-content;
+}

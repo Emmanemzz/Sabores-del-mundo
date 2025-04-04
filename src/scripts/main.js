@@ -9,8 +9,8 @@ window.onload = () => {
 function onMenuClick() {
     nav.classList.toggle("hidden");
     if(nav.classList.contains("hidden")){
-        navIcon.src = "./assets/images/menu/menu.png";
+        navIcon.src = "assets/images/menu/menu.png";
     }else{
-        navIcon.src = "./assets/images/menu/close.png"; 
+        navIcon.src = "assets/images/menu/close.png"; 
     }
 }

@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./output.css" rel="stylesheet" />
+    <link href="output.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet">
     <script src="scripts/main.js"></script> <!--link script menu hamburguesa-->
     <title>Detalle de recetas</title>
 </head>
@@ -16,25 +17,25 @@
         <header class="mb-8">
             <!--div class="flex justify-end md:justify-evenly pt-10 mb-7-->
             <div class="flex justify-between md:justify-center pt-10 mb-7">
-                <img src="./assets/images/logo/logo.jpg" alt="Logo Sabores del Mundo" class="w-70 md:w-auto h-20" />
+                <img src="assets/images/logo/logo.jpg" alt="Logo Sabores del Mundo" class="w-70 md:w-auto h-20" />
                 <button onclick="onMenuClick()" type="button" class="md:hidden cursor-pointer"><img id="nav-icon"
-                        width="45" height="45" src="./assets/images/menu/menu.png" alt="Menú"></button>
+                        width="45" height="45" src="assets/images/menu/menu.png" alt="Menú"></button>
             </div>
             <!--menú hamburguer-->
             <nav id="mobile-nav"
                 class="w-full hidden md:hidden bg-neutral-600 border-x-2 border-y-2 border-neutral-700 text-amber-50">
                 <ul class="flex w-full flex-col md:flex-row justify-start md:justify-center">
                     <li class="hover:bg-amber-50 hover:text-neutral-600 transition">
-                        <a href="./inicio.html" class="px-4 md:px-18 ">INICIO</a>
+                        <a href="inicio.html" class="px-4 md:px-18 ">INICIO</a>
                     </li>
                     <li class="hover:bg-amber-50 hover:text-neutral-600 transition">
-                        <a href="./recetas.html" class="px-4 md:px-18 h">RECETAS</a>
+                        <a href="recetas.html" class="px-4 md:px-18 h">RECETAS</a>
                     </li>
                     <li class="hover:bg-amber-50 hover:text-neutral-600 transition">
-                        <a href="./login-usuario.html" class="px-4 md:px-18 ">PERFIL</a>
+                        <a href="login-usuario.html" class="px-4 md:px-18 ">PERFIL</a>
                     </li>
                     <li class="hover:bg-amber-50 hover:text-neutral-600 transition">
-                        <a href="./contacto.html" class="px-4 md:px-18 ">CONTACTO</a>
+                        <a href="contacto.html" class="px-4 md:px-18 ">CONTACTO</a>
                     </li>
                 </ul>
             </nav>
@@ -42,16 +43,16 @@
             <nav class="w-full hidden md:block bg-neutral-600 border-x-2 border-y-2 border-neutral-700 text-amber-50">
                 <ul class="flex w-full flex-col md:flex-row justify-start md:justify-center">
                     <li class="hover:bg-amber-50 hover:text-neutral-600 transition">
-                        <a href="./inicio.html" class="px-4 md:px-18 ">INICIO</a>
+                        <a href="inicio.html" class="px-4 md:px-18 ">INICIO</a>
                     </li>
                     <li class="hover:bg-amber-50 hover:text-neutral-600 transition">
-                        <a href="./recetas.html" class="px-4 md:px-18 h">RECETAS</a>
+                        <a href="recetas.html" class="px-4 md:px-18 h">RECETAS</a>
                     </li>
                     <li class="hover:bg-amber-50 hover:text-neutral-600 transition">
-                        <a href="./login-usuario.html" class="px-4 md:px-18 ">PERFIL</a>
+                        <a href="login-usuario.html" class="px-4 md:px-18 ">PERFIL</a>
                     </li>
                     <li class="hover:bg-amber-50 hover:text-neutral-600 transition">
-                        <a href="./contacto.html" class="px-4 md:px-18 ">CONTACTO</a>
+                        <a href="contacto.html" class="px-4 md:px-18 ">CONTACTO</a>
                     </li>
                 </ul>
             </nav>
@@ -59,33 +60,76 @@
         <main>
             <section class="mb-10">
                 <h1 class="text-xl text-center mb-5">TIRAMISÚ</h1>
-                <hr class="">
-                <div>
-                    <article class="detalle-receta bg-orange-50">
-                        <img src="./assets/images/recetas/receta-pasos/tiramisu-1.webp" alt="Presentación Tiramisú"
-                            class="w-100 h-100 m-15 pt-5">
-                            
+                <hr class="pb-4">
+                <article class="text-center bg-orange-50">
+                    <div class="md:flex justify-center md:justify-evenly pt-5">
+                        <img width="560" height="420" src="assets/images/recetas/receta-pasos/tiramisu-1.webp"
+                            alt="Presentación Tiramisú" class="p-5">
+                        <div class="flex flex-col mb-8 w-90">
+                            <h3 class="underline text-xl pb-2">INFORMACIÓN DE LA RECETA</h3>
+                            <P class="text-justify px-5">El tiramisú es un postre emblemático de la repostería
+                                italiana.Se trata de un postre frío que no necesita horneado, compuesto por capas de
+                                bizcochos intercalados con una mezcla cremosa a base de queso mascarpone y coronado con
+                                una capa de cacao en polvo.</P>
+                            <p class="text-justify px-5">Tiempo de preparación: 50 minutos</p>
+                            <!--FALTA VALORACIÓN-->
+                        </div>
+                    </div>
+                    <div class="md:flex justify-center md:justify-evenly">
+                        <img width="560" height="420" src="assets/images/recetas/receta-pasos/tiramisu-2.webp"
+                            alt="Ingredientes Tiramisú" class="p-5">
+                        <div class="flex flex-col justify-around mb-8 w-90">
+                            <h3 class="underline text-xl  pb-2">INGREDIENTES</h3>
+                            <p class="text-justify px-5"> 24 bizcochos de soletilla</p>
+                            <p class="text-justify px-5">250 g de queso mascarpone</p>
+                            <p class="text-justify px-5">2huevos M</p>
+                            <p class="text-justify px-5">50 g de azúcar</p>
+                            <p class="text-justify px-5">1 taza de café frío</p>
+                            <p class="text-justify px-5">30ml de licor amaretto</p>
+                            <p class="text-justify px-5">30 g de cacao en polvo</p>
+                        </div>
+                    </div>
+                    <div class=" md:flex justify-center md:justify-evenly">
+                        <img width="560" height="420" src="assets/images/recetas/receta-pasos/tiramisu-3.webp" alt=""
+                            class="elaboracion p-5">
+                        <div class="flex flex-col justify-around mb-8 w-90">
+                            <h3 class="underline text-xl  pb-2">ELABORACIÓN</h3>
+                            <p class="text-justify px-5">1.Preparar el café: Hacer una buena cantidad de café fuerte y
+                                dejar enfriar. Si se desea, añadir un chorrito de licor.</p>
+                            <p class="text-justify px-5">2.Batir las yemas: Mezclar las yemas con el azúcar hasta que la
+                                mezcla esté pálida y cremosa.</p>
+                            <p class="text-justify px-5">3.Añadir el mascarpone: Incorporar el queso mascarpone a la
+                                mezcla de yemas, batiendo hasta obtener una crema suave.</p>
+                            <p class="text-justify px-5">4.Añadir el mascarpone: Incorporar el queso mascarpone a la
+                                mezcla de yemas, batiendo hasta obtener una crema suave..</p>
+                            <p class="text-justify px-5">5.Montar el postre: Remojar brevemente los bizcochos en el café
+                                y colocarlos en una fuente, formando la base. Cubrir con una capa de crema. Repetir el
+                                proceso haciendo varias capas.</p>
+                            <p class="text-justify px-5">6.Finalizar: Espolvorear con cacao en polvo usando un colador
+                                para que quede fino y uniforme.</p>
+                            <p class="text-justify px-5">7.Reposar en frío: Refrigerar al menos 4 horas antes de servir.
+                                Mejora notablemente de un día para otro.</p>
 
-                    </article>
-                </div>
+                        </div>
+                    </div>
+                </article>
             </section> <!--cierre section detalle receta-->
         </main> <!--cierre main-->
         <!--FOOTER-->
         <footer class="bg-orange-50 container mx-auto py-8 px-28">
             <div class="flex flex-col md:flex-row justify-evenly gap-8">
                 <div class="flex justify-center">
-                    <img src="./assets/images/logo/logo-footer.png" alt="Logo Sabores del Mundo" class="h-14">
+                    <img src="assets/images/logo/logo-footer.png" alt="Logo Sabores del Mundo" class="h-14">
                 </div>
                 <ul class="flex justify-center mt-4">
                     <li><a href="#" class="text-stone-500 px-4">Sobre nosotros</a></li>
                     <li><a href="#" class="text-stone-500 px-4 pt-5 md:py-0">Dirección</a></li>
                 </ul>
                 <div class="flex justify-center gap-8 mt-3">
-                    <a href=""><img src="./assets/images/redes-sociales/facebook.png" alt="Facebook"
+                    <a href=""><img src="assets/images/redes-sociales/facebook.png" alt="Facebook" class="h-8 w-8"></a>
+                    <a href=""><img src="assets/images/redes-sociales/instagram.png" alt="Instagram"
                             class="h-8 w-8"></a>
-                    <a href=""><img src="./assets/images/redes-sociales/instagram.png" alt="Instagram"
-                            class="h-8 w-8"></a>
-                    <a href=""><img src="./assets/images/redes-sociales/twitter.png" alt="Twitter" class="h-8 w-8"></a>
+                    <a href=""><img src="assets/images/redes-sociales/twitter.png" alt="Twitter" class="h-8 w-8"></a>
                 </div>
             </div> <!--cierre div footer-->
         </footer>
