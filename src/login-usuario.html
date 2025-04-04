@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="output.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="scripts/main.js"></script> <!--link script menu hamburguesa-->
+    <title>Sabores del Mundo</title>
+</head>
+
+<body
+    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"
+    class="bg-white">
+    <div class="container mx-auto px-4">
+        <!-- HEADER-->
+        <header class="mb-8">
+            <!--div class="flex justify-end md:justify-evenly pt-10 mb-7-->
+            <div class="flex justify-between md:justify-center pt-10 mb-7">
+                <img src="assets/images/logo/logo.jpg" alt="Logo Sabores del Mundo" class="w-70 md:w-auto h-20" />
+                <button onclick="onMenuClick()" type="button" class="md:hidden cursor-pointer"><img id="nav-icon"
+                        width="45" height="45" src="assets/images/menu/menu.png" alt="Menú"></button>
+            </div>
+            <!--menú hamburguer-->
+            <nav id="mobile-nav"
+                class="w-full hidden md:hidden bg-neutral-600 border-x-2 border-y-2 border-neutral-700 text-amber-50">
+                <ul class="flex w-full flex-col md:flex-row justify-start md:justify-center">
+                    <li class="hover:bg-amber-50 hover:text-neutral-600 transition">
+                        <a href="inicio.html" class="px-4 md:px-18 ">INICIO</a>
+                    </li>
+                    <li class="hover:bg-amber-50 hover:text-neutral-600 transition">
+                        <a href="recetas.html" class="px-4 md:px-18 h">RECETAS</a>
+                    </li>
+                    <li class="hover:bg-amber-50 hover:text-neutral-600 transition">
+                        <a href="login-usuario.html" class="px-4 md:px-18 ">PERFIL</a>
+                    </li>
+                    <li class="hover:bg-amber-50 hover:text-neutral-600 transition">
+                        <a href="contacto.html" class="px-4 md:px-18 ">CONTACTO</a>
+                    </li>
+                </ul>
+            </nav>
+            <!--Menú desktop-->
+            <nav class="w-full hidden md:block bg-neutral-600 border-x-2 border-y-2 border-neutral-700 text-amber-50">
+                <ul class="flex w-full flex-col md:flex-row justify-start md:justify-center">
+                    <li class="hover:bg-amber-50 hover:text-neutral-600 transition">
+                        <a href="inicio.html" class="px-4 md:px-18 ">INICIO</a>
+                    </li>
+                    <li class="hover:bg-amber-50 hover:text-neutral-600 transition">
+                        <a href="recetas.html" class="px-4 md:px-18 h">RECETAS</a>
+                    </li>
+                    <li class="hover:bg-amber-50 hover:text-neutral-600 transition">
+                        <a href="login-usuario.html" class="px-4 md:px-18 ">PERFIL</a>
+                    </li>
+                    <li class="hover:bg-amber-50 hover:text-neutral-600 transition">
+                        <a href="contacto.html" class="px-4 md:px-18 ">CONTACTO</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="mb-10">
+                <h1 class="text-xl text-center mb-2">INICIO DE SESIÓN</h1>
+                <h5 class="text-center mb-5">Si ya tienes una cuenta, inicia sesión con tu dirección de email</h5>
+                <hr class="pb-8 pt-0" />
+                <div class="bg-stone-900">
+                    <div>
+                        <form action="mailto:saboresdelmundo@correonoexiste.es?" enctype="text/plain">
+                            <fieldset>
+                                <legend>Correo electrónico</legend>
+                                <label for="email">
+                                    <input type="email" id="email" name="email">
+                                </label>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Contraseña:</legend>
+                                <label for="password">
+                                    <input type="password" id="password" name="password">
+                                </label>
+                            </fieldset>
+                            <button type="submit">Iniciar sesión</button>
+                        </form>
+                    </div>
+                    <p>¿Todavía no tienes una cuenta?<a href="registro.usuario.html" target="_blank"
+                            class="underline">Crea tu cuenta</a></p>
+                </div>
+    </div>
+    </main> <!--cierre main-->
+    <!--FOOTER-->
+    <footer class="bg-orange-50 container mx-auto py-8 px-28">
+        <div class="flex flex-col md:flex-row justify-evenly gap-8">
+            <div class="flex justify-center">
+                <img src="assets/images/logo/logo-footer.png" alt="Logo Sabores del Mundo" class="h-14">
+            </div>
+            <ul class="flex justify-center mt-4">
+                <li><a href="#" class="text-stone-500 px-4">Sobre nosotros</a></li>
+                <li><a href="#" class="text-stone-500 px-4 pt-5 md:py-0">Dirección</a></li>
+            </ul>
+            <div class="flex justify-center gap-8 mt-3">
+                <a href=""><img src="assets/images/redes-sociales/facebook.png" alt="Facebook" class="h-8 w-8"></a>
+                <a href=""><img src="assets/images/redes-sociales/instagram.png" alt="Instagram" class="h-8 w-8"></a>
+                <a href=""><img src="assets/images/redes-sociales/twitter.png" alt="Twitter" class="h-8 w-8"></a>
+            </div>
+        </div> <!--cierre div footer-->
+    </footer>
+    </div><!--cierre div body-->
+</body>
+
+</html>
