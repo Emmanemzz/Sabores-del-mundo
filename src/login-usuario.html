@@ -5,14 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="output.css" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
     <script src="scripts/main.js"></script> <!--link script menu hamburguesa-->
     <title>Sabores del Mundo</title>
 </head>
 
 <body
-    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"
-    class="bg-white">
+    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
     <div class="container mx-auto px-4">
         <!-- HEADER-->
         <header class="mb-8">
@@ -62,47 +60,55 @@
             <section class="mb-10">
                 <h1 class="text-xl text-center mb-2">INICIO DE SESIÓN</h1>
                 <h5 class="text-center mb-5">Si ya tienes una cuenta, inicia sesión con tu dirección de email</h5>
-                <hr class="pb-8 pt-0" />
-                <div class="bg-stone-900">
+                <hr class="pb-8 ">
+                <article class="border pb-5">
+                <form method="post" action="mailto:saboresdelmundo@correonoexiste.es?Subject=Sabores20%del20%Mundo"
+                    enctype="text/plain" class="text-center ">
+                    <fieldset>
+                        <legend class="pt-5">Correo electrónico:</legend>
+                        <label for="email">
+                            <input type="text" name="email" id="email" class="border  mt-2 px-18 py-2" />
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <legend class="pt-2">Contraseña:</legend>
+                        <label for="password">
+                            <input type="password" id="password" name="password" class="border  mt-2 px-18 py-2">
+                        </label>
+                    </fieldset>
+                    <a href="#" class="text-sm hover:underline text-red-900">¿Olvidaste tu contraseña?</a>
                     <div>
-                        <form action="mailto:saboresdelmundo@correonoexiste.es?" enctype="text/plain">
-                            <fieldset>
-                                <legend>Correo electrónico</legend>
-                                <label for="email">
-                                    <input type="email" id="email" name="email">
-                                </label>
-                            </fieldset>
-                            <fieldset>
-                                <legend>Contraseña:</legend>
-                                <label for="password">
-                                    <input type="password" id="password" name="password">
-                                </label>
-                            </fieldset>
-                            <button type="submit">Iniciar sesión</button>
-                        </form>
-                    </div>
-                    <p>¿Todavía no tienes una cuenta?<a href="registro.usuario.html" target="_blank"
-                            class="underline">Crea tu cuenta</a></p>
+                    <button type="submit" class=" cursor-pointer mt-5 border px-31 py-1 bg-emerald-700 hover:bg-orange-300 hover:text-black text-white font-semibold">Iniciar sesión</button>
                 </div>
-    </div>
-    </main> <!--cierre main-->
-    <!--FOOTER-->
-    <footer class="bg-orange-50 container mx-auto py-8 px-28">
-        <div class="flex flex-col md:flex-row justify-evenly gap-8">
-            <div class="flex justify-center">
-                <img src="assets/images/logo/logo-footer.png" alt="Logo Sabores del Mundo" class="h-14">
-            </div>
-            <ul class="flex justify-center mt-4">
-                <li><a href="#" class="text-stone-500 px-4">Sobre nosotros</a></li>
-                <li><a href="#" class="text-stone-500 px-4 pt-5 md:py-0">Dirección</a></li>
-            </ul>
-            <div class="flex justify-center gap-8 mt-3">
-                <a href=""><img src="assets/images/redes-sociales/facebook.png" alt="Facebook" class="h-8 w-8"></a>
-                <a href=""><img src="assets/images/redes-sociales/instagram.png" alt="Instagram" class="h-8 w-8"></a>
-                <a href=""><img src="assets/images/redes-sociales/twitter.png" alt="Twitter" class="h-8 w-8"></a>
-            </div>
-        </div> <!--cierre div footer-->
-    </footer>
+                </form>
+                <div class="flex justify-center pt-5">
+                    <p class="pr-2">¿Todavía no tienes una cuenta?</p>
+                    <a href="registro.usuario.html" target="_blank" class="underline hover:text-emerald-700 ">Crea tu cuenta</a>
+                </div>
+            </article>
+            
+            </section>
+
+        </main> <!--cierre main-->
+        <!--FOOTER-->
+        <footer class="bg-orange-50 container mx-auto py-8 px-28">
+            <div class="flex flex-col md:flex-row justify-evenly gap-8">
+                <div class="flex justify-center">
+                    <img src="assets/images/logo/logo-footer.png" alt="Logo Sabores del Mundo" class="h-14">
+                </div>
+                <ul class="flex justify-center mt-4">
+                    <li><a href="#" class="text-stone-500 px-4">Sobre nosotros</a></li>
+                    <li><a href="#" class="text-stone-500 px-4 pt-5 md:py-0">Dirección</a></li>
+                </ul>
+                <div class="flex justify-center gap-8 mt-3">
+                    <a href=""><img src="assets/images/redes-sociales/facebook.png" alt="Facebook" class="h-8 w-8"></a>
+                    <a href=""><img src="assets/images/redes-sociales/instagram.png" alt="Instagram"
+                            class="h-8 w-8"></a>
+                    <a href=""><img src="assets/images/redes-sociales/twitter.png" alt="Twitter" class="h-8 w-8"></a>
+                </div>
+            </div> <!--cierre div footer-->
+        </footer>
+
     </div><!--cierre div body-->
 </body>
 
