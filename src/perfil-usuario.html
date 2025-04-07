@@ -36,9 +36,6 @@
                             <a href="perfil-usuario.html" class="px-4 md:px-18 ">PERFIL</a>
                         </li>
                         <li class="hover:bg-amber-50 hover:text-neutral-600 transition">
-                            <a href="contacto.html" class="px-4 md:px-18 ">CONTACTO</a>
-                        </li>
-                        <li class="hover:bg-amber-50 hover:text-neutral-600 transition">
                             <a href="login-usuario.html" class="px-4 md:px-18 ">INICIAR SESIÓN</a>
                         </li>
                     </ul>
@@ -57,62 +54,128 @@
                             <a href="perfil-usuario.html" class="px-4 md:px-18 ">PERFIL</a>
                         </li>
                         <li class="hover:bg-amber-50 hover:text-neutral-600 transition">
-                            <a href="contacto.html" class="px-4 md:px-18 ">CONTACTO</a>
-                        </li>
-                        <li class="hover:bg-amber-50 hover:text-neutral-600 transition">
                             <a href="login-usuario.html" class="px-4 md:px-18 ">INICIAR SESIÓN</a>
                         </li>
                     </ul>
                 </nav>
             </header>
-            <main>
-                <section class="mb-10">
+            <main class="container w-full md:w-250 m-auto">
+                <section class="mb-8">
                     <h1 class="text-xl text-center mb-5">PERFIL</h1>
                     <hr class="pb-8 pt-0">
-                    <section class="bg-orange-50">
+                    <section class="bg-orange-50 rounded-lg shadow-xl">
                         <article class="py-4 px-8 flex flex-col md:flex-row gap-5">
                             <div class="flex justify-center md:justify-evenly">
                                 <img src="./assets/images/perfil-usuario/foto-perfil.jpg" width="180" height="180"
                                     alt="Foto perfil-usuario" class="shadow-xl rounded-full object-cover border-3">
+
                             </div>
                             <div class="px-14 pt-7">
                                 <p><span class="font-medium">Nombre:</span> Emma Rondinelli</p>
                                 <p><span class="font-medium">Alias:</span> Emmanemz</p>
                                 <p><span class="font-medium">Cumpleaños:</span> 16 de septiembre</p>
                                 <p>Cocinera principiante | Especialidad en postres y cocina tradicional peruana 🇵🇪</p>
+                                <div class="pt-2">
+                                    <button type="button"
+                                        class="cursor-pointer m-auto px-2 rounded bg-purple-300 text-black hover:bg-emerald-300 ">Editar
+                                        perfil</button>
+                                </div>
                             </div>
-                            <div class="pt-2">
-                                <h2 class="text-center">¡Mis redes sociales!</h2>
-                                <section class="flex flex-row gap-4 justify-center pt-2">
-                                    <a href="https://www.instagram.com/" target="_blank"><img
-                                            src="./assets/images/redes-sociales/instagram-usu.png"
-                                            alt="Instagram Usuario"
-                                            class="h-8 w-8"></a>
-                                    <a href="https://es.pinterest.com/" target="_blank"><img
-                                            src="./assets/images/redes-sociales/pinterest-usu.png"
-                                            alt="Pinterest Usuario"
-                                            class="h-8 w-8"></a>
-                                    <a href="https://x.com/?lang=es" target="_blank"><img
-                                            src="./assets/images/redes-sociales/twitter-usu.png"
-                                            alt="Twitter Usuario"
-                                            class="h-8 w-8"></a>
-                                    <a href="https://www.facebook.com/?locale=es_ES" target="_blank"><img
-                                            src="./assets/images/redes-sociales/facebook-usu.png"
-                                            alt="Facebook Usuario"
-                                            class="h-8 w-8"></a>
-                                </section>
-                            </div>
-
                         </article> <!--cierre div perfil-->
-                        <article>
-                            <div>
-                                <h1>RECETAS FAVORITAS</h1>
-                                <ul>
-                                    <li><a href=""></a></li>
-                                </ul>
+                    </section>
+                </section>
+                <section class="mb-8">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <article class="bg-orange-50 shadow-md hover:shadow-lg transition rounded-b-lg">
+                            <h1 class="text-center py-4 text-orange-50 font-medium bg-stone-500 rounded-t-lg">RECETAS
+                                GUARDADAS</h1>
+                            <hr>
+                            <ul class="pt-3 px-10">
+                                <li class="list-disc"><a href="#"
+                                        class="hover:underline hover:text-xl hover:text-orange-700">Ají de Gallina</a>
+                                </li>
+                                <li class="list-disc"><a href="#"
+                                        class="hover:underline hover:text-xl hover:text-orange-700">Ceviche peruano</a>
+                                </li>
+                                <li class="list-disc"><a href="#"
+                                        class="hover:underline hover:text-xl hover:text-orange-700">Tarta de manzana</a>
+                                </li>
+                                <li class="list-disc"><a href="#"
+                                        class="hover:underline hover:text-xl hover:text-orange-700">Tortitas</a></li>
+                                <li class="list-disc"><a href="#"
+                                        class="hover:underline hover:text-xl hover:text-orange-700">Paella
+                                        valenciana</a></li>
+                            </ul>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-5 pb-2">
+                                <button type="button"
+                                    class="cursor-pointer border m-auto px-2 rounded bg-emerald-800 text-orange-50 hover:bg-emerald-300 hover:text-black">Guardar
+                                    receta</button>
+                                <button type="button"
+                                    class="cursor-pointer border m-auto px-2 rounded bg-red-800 text-orange-50 hover:bg-red-300 hover:text-black">Eliminar
+                                    receta</button>
                             </div>
                         </article>
-                    </section>
+                        <article class="bg-orange-50 shadow-md hover:shadow-lg transition rounded-b-lg">
+                            <h1 class="text-center py-4 text-orange-50 font-medium bg-stone-500 rounded-t-lg">RECETAS
+                                CREADAS</h1>
+                            <hr>
+                            <ul class="pt-3 px-10">
+                                <li class="list-disc"><a href="#"
+                                        class="hover:underline hover:text-xl hover:text-orange-700">Lomo saltado</a>
+                                </li>
+                                <li class="list-disc"><a href="#"
+                                        class="hover:underline hover:text-xl hover:text-orange-700">Pasta carbonara</a>
+                                </li>
+                                <li class="list-disc"><a href="#"
+                                        class="hover:underline hover:text-xl hover:text-orange-700">Tarta de
+                                        chocolate</a>
+                                </li>
+                                <li class="list-disc"><a href="#"
+                                        class="hover:underline hover:text-xl hover:text-orange-700">Brownies</a></li>
+                                <li class="list-disc"><a href="#"
+                                        class="hover:underline hover:text-xl hover:text-orange-700">Fabada asturiana</a>
+                                </li>
+                            </ul>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-5 pb-2">
+                                <button type="button"
+                                    class="cursor-pointer border m-auto px-2 rounded bg-emerald-800 text-orange-50 hover:bg-emerald-300 hover:text-black">Subir
+                                    receta</button>
+                                <button type="button"
+                                    class="cursor-pointer border m-auto px-2 rounded bg-red-800 text-orange-50 hover:bg-red-300 hover:text-black">Borrar
+                                    receta</button>
+                            </div>
+                        </article>
+                    </div>
+                </section> <!--cierre recetas fav y propias-->
+                <hr class="pb-1">
+                <h1 class="text-xl pt-4">GALERÍA DE IMÁGENES</h1>
+                <section class="mb-8">
+                    <div>
+                        <h1 class="pt-9 text-center text-2xl">COMIDAS</h1>
+                        <hr class="pb-4">
+                        <article class="bg-orange-50 shadow-md hover:shadow-lg transition rounded-b-lg pt-2 pb-4">
+                            <div class="flex flex-col md:flex-row gap-8">
+                                <img src="./assets/images/recetas/lomo-saltadojpg.jpg" alt="Lomo saltado"
+                                    class="w-full h-100 object-cover transition-transform duration-300 hover:scale-105 px-5 pt-5 pb-2">
+                                <img src="./assets/images/recetas/paella.jpg" alt="Paella"
+                                    class="w-full md:w-78 h-100 object-cover transition-transform duration-300 hover:scale-105 px-5 pt-5 pb-2">
+                                <img src="./assets/images/recetas/pasta-carbonara.webp" alt="Pasta carbonara"
+                                    class="w-full h-100 object-cover transition-transform duration-300 hover:scale-105 px-5 pt-5 pb-2">
+                            </div>
+                        </article>
+                        <h1 class="pt-9 text-center text-2xl">POSTRES</h1>
+                        <hr class="pb-4">
+                        <article class="bg-orange-50 shadow-md hover:shadow-lg transition rounded-b-lg pt-2 pb-4">
+                            <div class="flex flex-col md:flex-row gap-8">
+                                <img src="./assets/images/recetas/tarta-chocolate.jpg" alt="Tarta de chocolate"
+                                    class="w-full h-100 object-cover transition-transform duration-300 hover:scale-105 px-5 pt-5 pb-2">
+                                <img src="./assets/images/recetas/tortitas.webp" alt="Tortitas con nata"
+                                    class="w- full md:w-78 h-100 object-cover transition-transform duration-300 hover:scale-105 px-5 pt-5 pb-2">
+                                <img src="./assets/images/recetas/tarta-manzana.webp" alt="Tarta manzana"
+                                    class="w-full md:w-78 h-100 object-cover transition-transform duration-300 hover:scale-105 px-5 pt-5 pb-2">
+                            </div>
+                        </article>
+                    </div>
                 </section>
             </main> <!--cierre main-->
             <!--FOOTER-->

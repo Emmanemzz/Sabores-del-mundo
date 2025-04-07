@@ -35,7 +35,7 @@
                         <a href="login-usuario.html" class="px-4 md:px-18 ">PERFIL</a>
                     </li>
                     <li class="hover:bg-amber-50 hover:text-neutral-600 transition">
-                        <a href="contacto.html" class="px-4 md:px-18 ">CONTACTO</a>
+                        <a href="login-usuario.html" class="px-4 md:px-18 ">INICIAR SESIÓN</a>
                     </li>
                 </ul>
             </nav>
@@ -52,68 +52,132 @@
                         <a href="login-usuario.html" class="px-4 md:px-18 ">PERFIL</a>
                     </li>
                     <li class="hover:bg-amber-50 hover:text-neutral-600 transition">
-                        <a href="contacto.html" class="px-4 md:px-18 ">CONTACTO</a>
+                        <a href="login-usuario.html" class="px-4 md:px-18 ">INICIAR SESIÓN</a>
                     </li>
                 </ul>
             </nav>
         </header>
-        <main>
-            <section class="mb-10">
-                <h1 class="text-xl text-center mb-5">TIRAMISÚ</h1>
-                <hr class="pb-4">
-                <article class="text-center bg-orange-50">
-                    <div class="md:flex justify-center md:justify-evenly pt-5">
-                        <img width="560" height="420" src="assets/images/recetas/receta-pasos/tiramisu-1.webp"
-                            alt="Presentación Tiramisú" class="p-5">
-                        <div class="flex flex-col mb-8 w-90">
-                            <h3 class="underline text-xl pb-2">INFORMACIÓN DE LA RECETA</h3>
-                            <P class="text-justify px-5">El tiramisú es un postre emblemático de la repostería
-                                italiana.Se trata de un postre frío que no necesita horneado, compuesto por capas de
-                                bizcochos intercalados con una mezcla cremosa a base de queso mascarpone y coronado con
-                                una capa de cacao en polvo.</P>
-                            <p class="text-justify px-5">Tiempo de preparación: 50 minutos</p>
-                            <!--FALTA VALORACIÓN-->
-                        </div>
+        <main class="container w-full md:w-250 m-auto">
+            <section class="mb-8">
+                <h1 class="text-xl text-center">RECETA TIRAMISÚ</h1>
+                <hr>
+                <section class="pt-4 ">
+                    <div>
+                        <article class="flex flex-col md:flex-row m-auto gap-9">
+                            <img src="./assets/images/recetas/receta-pasos/tiramisu-1.webp" alt="Presentación tiramisú"
+                                class="w-full md:w-120 md:h-100">
+                            <img src="./assets/images/recetas/receta-pasos/tiramisu-2.webp" alt="Ingredientes tiramisú"
+                                class="w-full md:w-120 md:h-100">
+                        </article>
                     </div>
-                    <div class="md:flex justify-center md:justify-evenly">
-                        <img width="560" height="420" src="assets/images/recetas/receta-pasos/tiramisu-2.webp"
-                            alt="Ingredientes Tiramisú" class="p-5">
-                        <div class="flex flex-col justify-around mb-8 w-90">
-                            <h3 class="underline text-xl  pb-2">INGREDIENTES</h3>
-                            <p class="text-justify px-5"> 24 bizcochos de soletilla</p>
-                            <p class="text-justify px-5">250 g de queso mascarpone</p>
-                            <p class="text-justify px-5">2huevos M</p>
-                            <p class="text-justify px-5">50 g de azúcar</p>
-                            <p class="text-justify px-5">1 taza de café frío</p>
-                            <p class="text-justify px-5">30ml de licor amaretto</p>
-                            <p class="text-justify px-5">30 g de cacao en polvo</p>
-                        </div>
+                </section>
+                <section class="pt-4 ">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <article
+                            class="bg-orange-50 shadow-md hover:shadow-lg transition rounded-b-lg pt-4 hover:bg-emerald-800 hover:text-orange-50">
+                            <h1 class="text-center pb-2 font-medium">INFORMACIÓN DE LA RECETA</h1>
+                            <hr>
+                            <p class="text-justify py-4 px-6">El tiramisú es uno de los postres más emblemáticos de la
+                                repostería italiana.
+                                Se trata de un postre frío sin hornear, compuesto por capas de bizcochos empapados en
+                                café, intercaladas con una mezcla a base de queso mascarpone, huevos y azúcar, y
+                                coronado con una generosa capa de cacao en polvo. Es conocido por su textura suave y
+                                aterciopelada, y su sabor equilibrado entre dulce, amargo y cremoso.</p>
+                        </article>
+                        <article
+                            class="bg-orange-50 shadow-md hover:shadow-lg transition rounded-b-lg pt-4 hover:bg-emerald-800 hover:text-orange-50">
+                            <h1 class="text-center pb-2 font-medium">INGREDIENTES</h1>
+                            <hr>
+                            <ul class="py-3 px-30">
+                                <li class="list-disc">2 huevos</li>
+                                <li class="list-disc">50 g de azúcar</li>
+                                <li class="list-disc">1 taza de café frío</li>
+                                <li class="list-disc">24 bizcochos de soletilla</li>
+                                <li class="list-disc">30 ml de licor amaretto</li>
+                                <li class="list-disc">30 g de cacao en polvo</li>
+                                <li class="list-disc">250 g de queso mascarpone</li>
+                            </ul>
+                            <ul class="py-2 px-30">
+                                <li class="list-disc">Tiempo de preparación 50 minutos</li>
+                                <li class="list-disc">Receta para 6 raciones</li>
+                            </ul>
+                        </article>
                     </div>
-                    <div class=" md:flex justify-center md:justify-evenly">
-                        <img width="560" height="420" src="assets/images/recetas/receta-pasos/tiramisu-3.webp" alt=""
-                            class="elaboracion p-5">
-                        <div class="flex flex-col justify-around mb-8 w-90">
-                            <h3 class="underline text-xl  pb-2">ELABORACIÓN</h3>
-                            <p class="text-justify px-5">1.Preparar el café: Hacer una buena cantidad de café fuerte y
-                                dejar enfriar. Si se desea, añadir un chorrito de licor.</p>
-                            <p class="text-justify px-5">2.Batir las yemas: Mezclar las yemas con el azúcar hasta que la
-                                mezcla esté pálida y cremosa.</p>
-                            <p class="text-justify px-5">3.Añadir el mascarpone: Incorporar el queso mascarpone a la
-                                mezcla de yemas, batiendo hasta obtener una crema suave.</p>
-                            <p class="text-justify px-5">4.Añadir el mascarpone: Incorporar el queso mascarpone a la
-                                mezcla de yemas, batiendo hasta obtener una crema suave..</p>
-                            <p class="text-justify px-5">5.Montar el postre: Remojar brevemente los bizcochos en el café
-                                y colocarlos en una fuente, formando la base. Cubrir con una capa de crema. Repetir el
-                                proceso haciendo varias capas.</p>
-                            <p class="text-justify px-5">6.Finalizar: Espolvorear con cacao en polvo usando un colador
-                                para que quede fino y uniforme.</p>
-                            <p class="text-justify px-5">7.Reposar en frío: Refrigerar al menos 4 horas antes de servir.
-                                Mejora notablemente de un día para otro.</p>
-
-                        </div>
+                </section>
+                <section class="pt-6 ">
+                    <h1 class="text-center pb-2 font-medium">MÉTODO DE ELABORACIÓN</h1>
+                    <hr class=pb-2>
+                    <article class="bg-orange-50 shadow-md hover:shadow-lg transition rounded-b-lg pt-4">
+                        <div class="px-10">
+                        <p>1. Separamos las claras y las yemas de 2 huevos y reservamos las yemas para montar las claras
+                            a punto de nieve.</p>
+                        <p>2. Batimos las yemas que hemos reservado con 50 gramos de azúcar hasta que hayan blanqueado y
+                            doblado su volumen.</p>
+                        <p>3. Agregamos a los 250 gramos de queso mascarpone las yemas con el azúcar y mezclamos bien.
+                        </p>
+                        <p>4. A continuación, añadimos las claras montadas y mezclamos con ayuda de una espátula
+                            haciendo movimientos envolventes.</p>
+                        <p>5. Mezclamos 1 taza de café frío con los 30 ml de licor amaretto.</p>
                     </div>
-                </article>
+                    </article>
+                </section>
+                <section class="pt-4">
+                    <article class="bg-orange-50 shadow-md hover:shadow-lg transition rounded-b-lg pt-4">
+                        <div class="px-10">
+                        <p>1. Para realizar el montado, vamos mojando de uno en uno los bizcochos de soletilla en la
+                            mezcla de café y amaretto.</p>
+                        <p>2. Colocamos los bizcochos humedecidos en toda la base de un molde hasta que no queden
+                            huecos.</p>
+                        <p>3. Vertemos la mitad de la crema de mascarpone sobre los bizcoshos y alisamos.
+                        </p>
+                        <p>4. Sobre esa capa de mascarpone ponermos otra capa de bizcochos remojados en la mezcla de
+                            café.</p>
+                        <p>5. Ponemos encima de la segunda capa de bizcochos el resto de la crema de mascarpone y
+                            alisamos.</p>
+                        <p>6. Espolvoreamos en la superficie 30 gramos de cacao en polvo y lo llevamos a la nevera hasta
+                            que sea momento de servirlo.</p>
+                        </div>
+                    </article>
+                </section>
             </section> <!--cierre section detalle receta-->
+            <div>
+                <article class="flex flex-col md:flex-row m-auto gap-9">
+                <img src="./assets/images/recetas/receta-pasos/tiramisu-3.webp" alt="Montado tiramisú" class="w-full md:w-120 md:h-100">
+                <img src="./assets/images/recetas/receta-pasos/tiramisu-4.webp" alt="Montado tiramisú" class="w-full md:w-120 md:h-100">
+            </article>
+                <img src="./assets/images/recetas/receta-pasos/tiramisu-5.webp" alt="Presentación final"class="w-full pt-4">
+            </div>
+            <!--sección comentarios-->
+            <section class="mb-8 pt-6">
+                <div>
+                    <article class="bg-orange-50 shadow-md hover:shadow-lg transition rounded-b-lg px-8">
+                        <h1 class="text-2xl font-bold text-gray-800 pt-5">COMENTARIOS</h1>
+                        <span class="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded-full">2
+                            comentarios</span>
+                        <div class="bg-white rounded-lg shadow p-6 mb-8 mt-4">
+                            <h3 class="text-lg font-semibold mb-4 text-gray-800">Deja tu comentario</h3>
+                            <form>
+                                <div class="mb-4 ">
+                                    <label for="name"
+                                        class="block text-sm font-medium text-gray-700 mb-1">Nombre</label>
+                                    <input type="text" id="name"
+                                        class="w-full px-4 py-2 border border-gray-300 rounded-lg ">
+                                </div>
+                                <div class="mb-4">
+                                    <label for="comment"
+                                        class="block text-sm font-medium text-gray-700 mb-1">Comentario</label>
+                                    <textarea id="comment" rows="4"
+                                        class="w-full px-4 py-2 border border-gray-300 rounded-lg "></textarea>
+                                </div>
+                                <button type="submit"
+                                    class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition duration-200">
+                                    Publicar comentario
+                                </button>
+                            </form>
+                        </div>
+                    </article>
+                </div>
+            </section>
         </main> <!--cierre main-->
         <!--FOOTER-->
         <footer class="bg-orange-50 container mx-auto py-8 px-28">
