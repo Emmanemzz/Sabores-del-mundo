@@ -1,0 +1,322 @@
+drop schema Sabores;
+create schema Sabores;
+use Sabores;
+-- Primero genero la tabla que no tiene foreign key
+
+create table ROL(
+rolId int,
+nombre varchar(30) NOT NULL,
+primary key(rolId)
+);
+
+create table PAIS(
+paisId int,
+nombre varchar(30) NOT NULL,
+primary key(paisId)
+);
+
+create table CATEGORIA(
+categoriaId int,
+nombre varchar(30) NOT NULL,
+descripcion varchar(150),
+primary key(categoriaId)
+);
+
+create table INGREDIENTE(
+ingredienteId int,
+nombre varchar(30) NOT NULL,
+descripcion varchar(150),
+categoria_ingrediente varchar(50),
+primary key(ingredienteId)
+);
+
+create table UNIDAD_MEDIDA(
+unidadId int,
+nombre varchar(20) NOT NULL,
+abreviatura varchar(10) NOT NULL,
+tipo varchar(30),
+primary key(unidadId)
+);
+
+
+
+create table USUARIO(
+usuarioId int,
+nombre varchar(30) NOT NULL,
+apellidos varchar(30) NOT NULL,
+email varchar(40) NOT NULL,
+passwd varchar(40),
+biografia varchar(150),
+idRol int,
+primary key(usuarioId)
+);
+
+create table RECETA(
+recetaId int,
+titulo varchar(30) NOT NULL,
+descripcion varchar(80),
+instrucciones varchar(1000),
+fecha_receta date NOT NULL,
+idUser int,
+idPais int,
+primary key(recetaId)
+);
+
+create table FAVORITO(
+favoritoId int,
+fecha_favorito date NOT NULL,
+idUser int,
+idReceta int,
+primary key(favoritoId)
+);
+
+create table COMENTARIO(
+comentarioId int,
+contenido varchar(150) NOT NULL,
+fecha_comentario date NOT NULL,
+idUser int,
+idReceta int,
+primary key(comentarioId)
+);
+
+create table PERTENECER(
+idReceta int,
+idCategoria int,
+primary key(idReceta,idCategoria)
+);
+
+create table CONTENER(
+idReceta int,
+idIngrediente int,
+primary key(idReceta,idIngrediente)
+);
+
+create table MEDIR(
+idIngrediente int,
+idUnidad int,
+primary key(idIngrediente,idUnidad)
+);
+
+-- Crear foreign key de cada tabla
+alter table USUARIO add constraint fk_usuRol foreign key(idRol) references ROL(rolId);
+alter table RECETA add constraint fk_receUsu foreign key(idUser) references USUARIO(usuarioId);
+alter table RECETA add constraint fk_recePais foreign key(idPais) references PAIS(paisId);
+alter table COMENTARIO add constraint fk_comentUsu foreign key(idUser) references USUARIO(usuarioId);
+alter table COMENTARIO add constraint fk_comentRecet foreign key(idReceta) references RECETA(recetaId);
+alter table FAVORITO add constraint fk_favUsu foreign key(idUser) references USUARIO(usuarioId);
+alter table FAVORITO add constraint fk_favRecet foreign key(idReceta) references RECETA(recetaId);
+
+
+-- INTRODUCCIÓN DE DATOS
+
+			-- TABLA ROL
+insert into ROL values (1, 'Administrador'),
+(2, 'Usuario'),
+(3, 'Chef'),
+(4, 'Blogger');
+
+insert into ROL (rolId, nombre) values (5, 'Editor');
+insert into ROL (rolId, nombre) values (6, 'Catador');
+
+
+			-- TABLA PAIS
+insert into PAIS values (1,'Italia'),
+(2,'España'),
+(3,'Japón'),
+(4,'Mexico'),
+(5,'Peru'),
+(6,'China'),
+(7,'Africa'),
+(8,'Rusia'),
+(9,'Colombia'),
+(10,'Tailandia');
+
+			-- TABLA CATEGORIA
+insert into CATEGORIA (categoriaId,nombre) values (1,'Bebidas'),
+(2,'Postres'),
+(3,'Ensaladas'),
+(4,'Entrantes'),
+(5,'Sopas'),
+(6,'Vegana'),
+(7,'Sin gluten'),
+(8,'Carnes'),
+(9,'Legumbres'),
+(10,'Mariscos');
+
+			-- TABLA INGREDIENTE
+insert into INGREDIENTE (ingredienteId,nombre,categoria_ingrediente) values (1,'Cebolla','Vegetal'),
+(2,'Sal','Sazonador'),
+(3,'Patata','Túberculo'),
+(4,'Aceite de oliva','Aceite vegetal'),
+(5,'Tomate','Vegetal'),
+(6,'Carne','Cárnico'),
+(7,'Huevo','Proteico'),
+(8,'Queso','Lácteo'),
+(9,'Cacao','Cacao'),
+(10,'Leche','Lácteo');
+
+			-- TABLA UNIDAD_MEDIDA
+insert into UNIDAD_MEDIDA (unidadId,nombre,abreviatura) values (1, 'Gramo', 'g'),
+(2, 'Kilogramo', 'kg'),
+(3, 'Litro', 'l'),
+(4, 'Mililitro', 'ml'),
+(5, 'Cucharada', 'cda'),
+(6, 'Cucharadita', 'cdta'),
+(7, 'Taza', 'tz'),
+(8, 'Unidad', 'u'),
+(9, 'Pizca', 'pz'),
+(10, 'Rebanada', 'rb');
+
+			-- TABLA USUARIO
+insert into USUARIO values
+(1, 'Emma','Rondinelli', 'emma@example.com', 'emma123', 'Amante de la cocina mexicana', 1),
+(2, 'Unai','González', 'unai@example.com', 'nero2021', 'Chef profesional', 3),
+(3, 'Lissbeth','Paredes', 'lissbeth@example.com', 'baltra', 'Me gusta la repostería', 2),
+(4, 'Pedro','Gómez', 'pedro@example.com', 'p3dr0g', 'Aprendiz de chef', 2),
+(5, 'Walter','Maldonado', 'walter@example.com', 'ysidoro1234', 'Nutricionista certificado', 4),
+(6, 'Juan','Pérez', 'juan@example.com', 'jperez', 'Editor de recetas', 2),
+(7, 'Lucía','Torres', 'lucia@example.com', 'luciaT', 'Blogger culinaria', 4),
+(8, 'Luis','Hernández', 'luis@example.com', 'lu1sh', 'Fan de las carnes', 3),
+(9, 'Andrea','Rojas', 'andrea@example.com', 'androj', 'Vegana feliz', 2),
+(10, 'Sofía','Díaz', 'sofia@example.com', 's0fi@', 'Exploradora de sabores', 4);
+
+insert into USUARIO (usuarioId, nombre, apellidos, email) 
+values (11, 'Carlos', 'Velázquez', 'cvelazquez@example.com');
+
+insert into USUARIO (usuarioId, nombre, apellidos, email, idRol) 
+values (12, 'Patricia', 'Solís', 'pat@example.com', 2);
+
+
+			-- TABLA RECETA
+insert into RECETA (recetaId,titulo,descripcion,fecha_receta,idUser,idPais) values
+(1, 'Tacos al pastor', 'Tacos con carne y piña','2021-05-01', 1, 4),
+(2, 'Spaghetti carbonara', 'Pasta con huevo y tocino','2024-06-12', 2, 1),
+(3, 'Sushi básico', 'Rollos de arroz y pescado','2024-07-20', 4, 3),
+(4, 'Paella valenciana', 'Arroz con mariscos','2024-08-15', 4, 2),
+(5, 'Curry de garbanzos', 'Curry vegano','2022-09-05', 2, 7),
+(6, 'Ceviche peruano', 'Pescado marinado','2023-10-10', 3, 5),
+(7, 'Tiramisu', 'Bizcochos montados','2024-11-03', 8, 1),
+(8, 'Empanadas criollas', 'Empanadas colombianas','2024-11-15', 8, 9),
+(9, 'Pad Thai', 'Fideos con vegetales','2021-12-01', 9, 10),
+(10, 'Hamburguesa clásica', 'Carne con pan', '2020-12-25', 1, 2);
+
+
+insert into RECETA (recetaId, titulo, fecha_receta, idUser, idPais) 
+values (11, 'Arepas', '2024-04-10', 3, 9);
+
+insert into RECETA (recetaId, titulo, descripcion, fecha_receta, idUser, idPais) 
+values(12, 'Ramen', 'Caldo con fideos', '2024-02-02', 6, 3);
+
+			-- TABLA FAVORITO
+insert into FAVORITO values
+(1, '2025-01-01', 1, 2),
+(2, '2025-01-02', 2, 3),
+(3, '2025-01-03', 3, 4),
+(4, '2025-02-24', 4, 5),
+(5, '2025-03-28', 5, 6),
+(6, '2024-02-14', 6, 7),
+(7, '2024-01-01', 7, 8),
+(8, '2024-01-02', 8, 9),
+(9, '2024-04-03', 9, 10),
+(10, '2024-04-04', 10, 1);
+
+			-- TABLA COMENTARIO
+insert into COMENTARIO values
+(1, '¡Excelente receta!', '2020-01-24', 1, 1),
+(2, 'Muy fácil de hacer', '2023-02-14', 2, 2),
+(3, 'Me encantó el sabor', '2018-09-13', 3, 3),
+(4, 'Perfecta para cenar', '2024-11-04', 4, 4),
+(5, 'La volveré a preparar', '2024-01-05', 5, 5),
+(6, 'Deliciosa', '2021-06-19', 6, 6),
+(7, 'Gran combinación', '2024-01-07', 7, 7),
+(8, 'Muy original', '2024-01-08', 8, 8),
+(9, 'Exquisito', '2023-01-09', 9, 9),
+(10, 'Buenísima', '2024-01-12', 10, 10);
+
+
+			-- CONSULTAS
+/*Usuarios con rol CHEF*/
+SELECT nombre 
+FROM USUARIO 
+WHERE (idRol = '3');
+
+/*Recetas publicadas en 2024*/
+SELECT titulo 
+FROM RECETA 
+WHERE year(fecha_receta) = 2024;
+
+/*Ingredientes de tipo Lácteo*/
+SELECT nombre 
+FROM INGREDIENTE 
+WHERE categoria_ingrediente = 'Lácteo';
+
+/*Categorías en las que el nombre empieza con P */
+SELECT nombre 
+FROM CATEGORIA 
+WHERE nombre LIKE 'P%';
+
+/*Titulo de una receta del pais con id 1 */
+SELECT titulo 
+FROM RECETA 
+WHERE idPais = 1;
+
+/*Categorías cuyo id sea menor o igual que 5 */
+SELECT nombre 
+FROM CATEGORIA 
+WHERE categoriaId <= 5;
+
+/*Ingredientes con descripción vacía o nula*/
+SELECT nombre 
+FROM INGREDIENTE 
+WHERE descripcion IS NULL;
+
+/*Recetas que hayan sido creadas en diciembre*/
+SELECT titulo 
+FROM RECETA 
+WHERE MONTH(fecha_receta) = 12;
+
+/*Mostrar los nombres de los usuarios en orden alfabétido*/
+SELECT nombre,apellidos
+FROM USUARIO
+ORDER BY 2;
+
+/*Titulo de una receta del pais con id 2*/
+SELECT titulo 
+FROM RECETA 
+WHERE idPais = 2;
+
+/*Mostrar las categorías ordenadas por el nombre de forma descendente*/
+SELECT * 
+FROM CATEGORIA 
+ORDER BY nombre DESC;
+
+/*Mostrar las categorías ordenadas por el id de forma descendente*/
+SELECT * 
+FROM CATEGORIA 
+ORDER BY categoriaId DESC;
+
+/*Ver las recetas cuyo titulo empieza por C*/
+SELECT * 
+FROM RECETA 
+WHERE titulo LIKE 'C%';
+
+/*Ordenar comentarios de forma descendente/ascendente*/
+SELECT * 
+FROM COMENTARIO 
+ORDER BY fecha_comentario DESC;
+
+SELECT * 
+FROM COMENTARIO 
+ORDER BY fecha_comentario;
+
+/*Ver todos los roles excepto el rol Usuario*/
+SELECT * 
+FROM ROL 
+WHERE nombre <> 'Usuario';
+
+/*Mostrar toda la información del usuario 1*/
+SELECT * 
+FROM USUARIO 
+WHERE (usuarioId = '1');
+
+SELECT * FROM USUARIO;
